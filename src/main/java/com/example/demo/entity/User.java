@@ -19,30 +19,27 @@ public class User {
 	private String name;
 
 	private String password;
-	
-	
+
 	//ゲッター
-	
+
 	public Integer getId() {
-		
+
 		return id;
 	}
-	
-	public String getEmai() {
-		
+
+	public String getEmail() {
+
 		return email;
 	}
-	
+
 	public String getName() {
-		
+
 		return name;
 	}
-	
+
 	public String getPassword() {
-		
+
 		return password;
 	}
-
-	
 
 }
