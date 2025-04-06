@@ -12,3 +12,5 @@
  	-- blogs テーブルにデータを挿入
  	INSERT INTO blogs (id, category_id, user_id, title, body) VALUES
  	(1, 1, 1, '見積もり', '見積もり金額を明日までに提出');
+ 	
+ 	
