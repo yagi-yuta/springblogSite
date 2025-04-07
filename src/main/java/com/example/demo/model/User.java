@@ -27,7 +27,6 @@ public String getPasswordConfirm() {
 }
 
 
-//セッター
 
 public void setName(String name) {
 	this.name = name;
