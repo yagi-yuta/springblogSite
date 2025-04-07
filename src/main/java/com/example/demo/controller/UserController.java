@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.model.User;
+
 @Controller
 public class UserController {
 	@Autowired //@Autowired @Componentで保存した情報でインスタンス化（スプリングコンテナに保存されたクラスをもとにデータを生成）
 	HttpSession session;
 
 	@Autowired //@Autowired @Componentで保存した情報でインスタンス化（スプリングコンテナに保存されたクラスをもとにデータを生成）
-	User account;　//モデル作成からここ！
+	User user;//モデル作成からここ！
 
 	@GetMapping({ "/users/new" })
 	public String newUsers() {
@@ -35,7 +37,10 @@ public class UserController {
 			model.addAttribute("message", "パスワードが一致しません");
 			return "userAdd";
 		}
-		account.setName(name);
+		user.setName(name);
+		user.setEmail(email);
+		user.setPassword(password);
+		user.setPasswordConfirm(passwordConfirm);
 		return "redirect:/login";
 	}
 
